@@ -92,4 +92,16 @@ int main(){
     clean_append_and_cloexec(fd3);
     puts("after clean append and cloexec for the last fd");
     print_flag(fd3);
+
+    // fffff, We cannot change O_SYNC and O_DSYNC on linux due to some bugs.
+    // see man fcntl(2)
+
+    // puts("after set sync for the last fd");
+    // set_fl(fd3, O_SYNC);
+    // print_flag(fd3);
+
+    // puts("after clear sync for the last fd");
+    // clr_fl(fd3, O_SYNC);
+
+    // print_flag(fd3);
 }
