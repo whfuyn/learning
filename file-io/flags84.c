@@ -37,6 +37,9 @@ void print_flag(int fd) {
     if(file_flag & O_APPEND) {
         puts("append mode");
     }
+    if(file_flag & O_SYNC) {
+        puts("synchronouse writes");
+    }
 
     puts("------------");
 }
@@ -62,11 +65,12 @@ void clean_append_and_cloexec(int fd) {
 
     if(prev_fd_flag == -1 || prev_file_flag == -1) panic("cannot get fd flag or file flag");
 
-    if(fcntl(fd, F_SETFD, prev_fd_flag ^ FD_CLOEXEC) == -1) {
+    // &~ IS NOT xor, because xor will turn on the bit flags if it's already off.
+    if(fcntl(fd, F_SETFD, prev_fd_flag & ~FD_CLOEXEC) == -1) {
         panic("cannot set fd flag");
     };
 
-    if(fcntl(fd, F_SETFL, prev_file_flag ^ O_APPEND) == -1) {
+    if(fcntl(fd, F_SETFL, prev_file_flag & ~O_APPEND) == -1) {
         panic("cannot set file flag");
     };
 }
@@ -86,6 +90,6 @@ int main(){
     print_flag(fd2);
     print_flag(fd3);
     clean_append_and_cloexec(fd3);
-    puts("after clean append and cloexec for fd3");
+    puts("after clean append and cloexec for the last fd");
     print_flag(fd3);
 }
