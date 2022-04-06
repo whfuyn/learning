@@ -5,3 +5,5 @@
 只在WSL2上测试。
 
 本项目仅作为记录。
+
+图是用[Excalidraw](https://github.com/excalidraw/excalidraw)画的，太棒了！
