@@ -73,4 +73,4 @@ If you open a file for read-write with the append flag, can you still read from 
 A:
 - Yes, I can read from anywhere using `lseek`, but everytime I write, the current file offset is set to the end of file.
 - No, the append flag will reset the current file offset to the end of file on write.
-[code](./exercise3.6p91.c)
+[code](./ex3.6p91.c)
