@@ -1,1 +1,10 @@
-.vscode
+*
+!*/
+!*.c
+!*.h
+!*.rs
+!*.ex
+!*.exs
+!*.png
+!*.md
+!.gitignore
