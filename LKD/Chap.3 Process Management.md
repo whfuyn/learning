@@ -83,3 +83,5 @@ find_new_reaper
 [Why thread_info should be the first element in task_struct?](https://stackoverflow.com/questions/61886139/why-thread-info-should-be-the-first-element-in-task-struct)
 
 [linux 进程内核栈](https://zhuanlan.zhihu.com/p/296750228)
+
+https://notes.shichao.io/utlk/ch3/
