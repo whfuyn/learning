@@ -1,6 +1,6 @@
 // Page 324
-
 // zig build-exe ex10_2.zig -lc
+
 // ➜  signals git:(master) ✗ ./ex10_2&
 // [1] 6565
 // ➜  signals git:(master) ✗ kill -USR1 6565
