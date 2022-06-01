@@ -20,6 +20,10 @@
 
 > 机会来自于分歧，用逻辑判断未来。
 
+> 休息的时候不要去做一些会吸走注意力的事情（玩手机、看视频），可以考虑冥想。
+
+参考[如何保持精力充沛](https://www.zhihu.com/question/21097892/answer/2480314403)
+
 ---
 
 ## Life Principles by Ray Dalio
