@@ -11,7 +11,7 @@
 - allocated via slab allocator.
 
 `thread_info`
-- arch-specific
+- stores arch-specific info
 - lives in the end of the kernel stack.
 
 When `CONFIG_THREAD_INFO_IN_TASK` is defined, `thread_info` lives in the head of `task_struct`, allowing casting `task_struct*` to `thread_info*`.
@@ -34,6 +34,7 @@ When `CONFIG_THREAD_INFO_IN_TASK` is defined, `thread_info` lives in the head of
 - TASK_RUNNING
     - running.
     - ready but not running.
+    - it's the only possible state for a process executing in user space.
 - TASK_INTERRUPTIBLE
     - sleep but interruptible.
     - waiting for some condition.
@@ -67,8 +68,7 @@ At this point, the only memory it occupies is its
 
 After the parent retrieves the info(`wait` family) or notify the kernel that it is uninterested. The remaining memory is freed.
 
-When to deallocated process descriptor, release_task() is called
-
+When to deallocate process descriptor, release_task() is called
 
 
 ## Parentless Task

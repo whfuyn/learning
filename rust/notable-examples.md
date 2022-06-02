@@ -20,3 +20,23 @@ fn main(){
 }
 ```
 
+```rust
+#[derive(Debug)]
+enum E {
+    A(i32),
+    B(i32),
+}
+
+fn main() {
+    let e = E::A(42);
+    let is_a = matches!(e, E::A(..));
+    let (E::A(i) | E::B(i)) = e; // 注意这个pattern
+    
+    dbg!(i);
+    if is_a {
+        println!("is A");
+    }
+    dbg!(i);
+}
+```
+
