@@ -40,3 +40,14 @@ fn main() {
 }
 ```
 
+
+`cargo rustc`和`cargo build`一样，但可以往rustc里传参数。`-C`意为codegen options。
+
+```
+cargo rustc -- -C link-args="-nostartfiles"
+```
+
+静态链接libc
+```
+cargo rustc -C target-feature=+crt-static
+```
