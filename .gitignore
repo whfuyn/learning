@@ -12,3 +12,4 @@
 !*.md
 !.gitignore
 zig-cache
+target
