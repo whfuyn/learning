@@ -31,6 +31,11 @@ impl Console {
     /// 2. It doesn't flush until `\r` or `\n`.
     pub fn put_char<C: Into<VgaChar> + Copy>(&mut self, ch: C) {
         let ch = ch.into();
+
+        // Sanity check.
+        assert!(self.col <= VGA_BUFFER_COLUMNS);
+        assert!(self.row <= VGA_BUFFER_COLUMNS);
+
         if self.col == VGA_BUFFER_COLUMNS {
             self.next_line();
         }
@@ -56,6 +61,7 @@ impl Console {
     fn next_line(&mut self) {
         if self.row + 1 < VGA_BUFFER_ROWS {
             self.row += 1;
+            self.col = 0;
             return;
         }
         // Move all the lines up.
