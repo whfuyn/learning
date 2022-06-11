@@ -24,6 +24,9 @@
 
 参考[如何保持精力充沛](https://www.zhihu.com/question/21097892/answer/2480314403)
 
+> 注意到自己什么时候对`为什么`的答案感到满意。
+磁力和如何回答为什么一节，[费曼访谈](https://www.bilibili.com/video/BV1wo4y197nX)
+
 ---
 
 ## Life Principles by Ray Dalio
