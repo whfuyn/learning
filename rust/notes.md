@@ -51,3 +51,10 @@ cargo rustc -- -C link-args="-nostartfiles"
 ```
 cargo rustc -C target-feature=+crt-static
 ```
+
+
+TODO: 这段什么意思呢？https://os.phil-opp.com/double-fault-exceptions/
+> Reload code segment register: We changed our GDT, so we should reload cs, the code segment register. This is required since the old segment selector could point to a different GDT descriptor now (e.g. a TSS descriptor).
+
+
+宏里用到unsafe要加个#[allow(unused_unsafe)]，不然如果用户在外面套了层unsafe会报warning。

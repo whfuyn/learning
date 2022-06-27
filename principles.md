@@ -27,6 +27,9 @@
 > 注意到自己什么时候对`为什么`的答案感到满意。
 磁力和如何回答为什么一节，[费曼访谈](https://www.bilibili.com/video/BV1wo4y197nX)
 
+> 再看看费曼关于思考方式的那段讨论，数秒和阅读、数秒和说话，关于人脑的基本机制的思考。
+视觉、声音，基本的思考机制。
+
 ---
 
 ## Life Principles by Ray Dalio
@@ -46,5 +49,7 @@
 > Embrace reality and deal with it
 - Be radically open-minded and radically transparent.
 - Truth, or more precisely, an accurate understanding of reality is the essential fondation for any good outcome.
+
+
 
 ---
